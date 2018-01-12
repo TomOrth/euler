@@ -6,7 +6,7 @@ var tbody = document.getElementById('tbody'),
     iterations = document.getElementById('iterations'),
     run = document.getElementById('run');
 
-run.onclick = function() {
+function euler() {
     var x = parseFloat(xi.value);
     var y = parseFloat(yi.value);
     while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
@@ -27,6 +27,14 @@ run.onclick = function() {
         tbody.appendChild(tr);
     }
 }
+
+function enter(e) {
+    var keycode = (e.keyCode ? e.keyCode : e.which);
+    if (keycode == '13') {
+        euler();
+    }
+}
+run.onclick = euler();
 
 function pretty(n) {
     var D = 100000000000;

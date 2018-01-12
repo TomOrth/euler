@@ -12,10 +12,10 @@
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
     <h1>Euler's Method</h1>
-    Start: (<input id="xi" type="number" class="small" value=1>, <input id="yi" type="number" class="small" value=1>)
-    | $\frac{dy}{dx}$: <input id="dydx" type="text" value="x+y">
-    | $&Delta;x$: <input id="dx" type="number" class="small" value=0.2>
-    | Iterations: <input id="iterations" type="number" class="small" value=6>
+    Start: (<input onkeypress="enter(event)" id="xi" type="number" class="small" value=1>, <input onkeypress="enter(event)" id="yi" type="number" class="small" value=1>)
+    | $\frac{dy}{dx}$: <input onkeypress="enter(event)" id="dydx" type="text" value="x+y">
+    | $&Delta;x$: <input onchange="euler()" id="dx" type="number" class="small" value=0.2>
+    | Iterations: <input onchange="euler()" id="iterations" type="number" class="small" value=6>
     <button id="run">Run</button>
     <table>
         <thead>
